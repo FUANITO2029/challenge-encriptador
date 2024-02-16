@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
     <body>
-        <h1>Encriptador de Textos</h1>
+        <header class="encabezado">
+            <img src="images/Logo.png" alt="Logo Alura">
+            <h1 class="title">Encriptador de textos</h1>
+        </header>
+
+        <main>
+            <section class="encryptor">
+                <form>
+                    
+                    <textarea class="text-encrytor" id="message" cols="100" rows="30" placeholder="Ingrese el texto aquí"></textarea>
+
+                    <p class="warning">Solo letras minúsculas y sin acentos</p>
+                    <div class="btns">
+                        <input type="button" value="Encriptar" class="btn btn-encryptor" placeholder="Encriptar">
+                        <input type="button" value="Desencriptar" class="btn btn-decrypt" placeholder="Desencriptar">
+                    </div>
+
+                </form>
+            </section>
+            
+            <section class="text-encrypted">mundo</section>
+        </main>
+
 
     </body>
     <script src="app.js"></script>

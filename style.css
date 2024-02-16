@@ -1,3 +1,91 @@
-h1{
-    font-size: 20px;
+/* .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}    
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+} */
+
+
+
+html, body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+}
+
+.encabezado{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.encabezado img{
+    padding: 13px ;
+}
+
+.encabezado .title{
+    display: inline;
+    font-size: 30px;
+}
+
+main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main > section {
+    margin: 40px 15px;
+    height:90%;
+}
+
+main .encryptor{
+    background-color: rgb(81, 174, 35);
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-encrytor{
+    display: block;
+    margin: 10px;
+}
+
+.warning{
+    margin: 5px 0 0 30px;
+    font-size: 10px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.btn{
+    width: 45%;
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+main .text-encrypted{
+    background-color: rgb(75, 66, 207);
+    width: 30%;
 }
