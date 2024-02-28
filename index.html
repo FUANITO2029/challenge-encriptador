@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <title>Encriptador</title>
 </head>
     <body>
@@ -21,23 +23,32 @@
                 <form class="form-encryptor">
                     
                     <!-- <textarea class="text-encrytor" id="message" cols="100" rows="30" placeholder="Ingrese el texto aquí"></textarea> -->
-                    <textarea class="text-encryptor" id="message" placeholder="Ingrese el texto aquí"></textarea>
+                    <textarea class="text-encryptor" id="message" placeholder="Ingrese el texto aquí" ></textarea>
 
-                    <p class="warning">Solo letras minúsculas y sin acentos</p>
+                    
+                    <p class="warning"><i class="fi fi-sr-exclamation"></i>Solo letras minúsculas y sin acentos</p>
                     <div class="btns">
-                        <input type="button" value="Encriptar" class="btn btn-encryptor" placeholder="Encriptar">
-                        <input type="button" value="Desencriptar" class="btn btn-decrypt" placeholder="Desencriptar">
+                        <input type="button" value="Encriptar" class="btn btn-encryptor">
+                        <input type="button" value="Desencriptar" class="btn btn-decrypt">
                     </div>
 
                 </form>
             </section>
             
             <section class="encrypted">
-                <img src="images/Muñeco.png" alt="muñeco">
+                <div class="no-text">
+                    <img src="images/Muñeco.png" alt="muñeco" class="muneco">
+    
+                    <div class="messages">
+                        <P class="no-message">Ningún mesaje fue encontrado</P>
+                        <p class="aviso">Ingresa el mensaje que deseas encriptar o desencriptar.</p>
+                    </div>
+                </div>
 
-                <div class="messages">
-                    <P class="no-message">Ningun mesaje fue encontrado</P>
-                    <p>Ingresa el mensaje que deseas encriptar o desencriptar</p>
+                <div class="with-text">
+                    <p class="text-encryted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea veniam sequi nihil maxime iste voluptatibus est dolor molestiae quis recusandae, quae, aut et saepe neque eum earum? Mollitia ullam temporibus nostrum inventore animi corporis nobis porro, cum illum nisi doloremque, facere ipsa facilis laboriosam ipsam hic rerum fugit soluta voluptatem repellendus perferendis voluptate et veniam. Enim saepe rerum in amet officia, ipsa dolore dolores. Enim laboriosam iusto culpa optio rerum excepturi nemo voluptatum illum! Blanditiis sed impedit error ratione. Possimus sapiente commodi minus, officia ipsa quia accusamus. Assumenda ad ducimus sapiente iure perspiciatis aut optio. Reprehenderit fugit distinctio at.</p>
+                    <button class="btn btn-copy"><i class="fi fi-rr-copy-alt">Copiar</i></button>
+
                 </div>
             </section>
         </main>
