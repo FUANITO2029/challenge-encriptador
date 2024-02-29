@@ -1,3 +1,280 @@
-h1{
+/* .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}    
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+} */
+
+:root{
+    /* Dark Blue Colors */
+    --darkblue100: #609ED4;
+    --darkblue200: #356EA9;
+    --darkblue300: #0A3871;
+    --darkblue400: #072B61;
+    --darkblue500: #052051;
+
+    /* Light Blue Colors */
+    --lightblue100: #F3F5FC; 
+    --lightblue200: #EFF1FA; 
+    --lightblue300: #E93CF8; 
+    --lightblue400: #AAB2D5; 
+    --lightblue500: #757FB2; 
+
+    /* Gray Colors */
+    --gray100: #CED4DA;
+    --gray200: #ADB5BD;
+    --gray300: #868E96;
+    --gray400: #495057;
+    --gray500: #343A40;
+}
+
+
+html, body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightblue200);
+}
+
+.encabezado{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.encabezado img{
+    padding: 10px;
+    width: 80px;
+}
+
+.encabezado .title{
+    display: inline;
+    font-size: 25px;
+    color: var(--darkblue500);
+}
+
+main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--lightblue200);
+}
+
+main > section {
+    margin: 10px 15px;
+    height:90%;
+}
+
+main .encryptor{
+    background-color: var(--lightblue200);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-encryptor{
+    width: 100%;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+.text-encryptor{
+    display: inline-block;
+    margin-top:10px;
+    width: 95%;
+    height: 80%;
+    border: 0;
+    outline: none;
+    background-color: var(--lightblue200);
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 20px;
+}
+
+.warning{
+    margin: 5px 0 0 65px;
+    font-size: 11px;
+    text-align: left;
+}
+
+.warning i{
+    margin: 0px 5px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.btn{
+    width: 40%;
+    margin: 0px 10px 10px 10px;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+}
+
+.btn-encryptor{
+    background-color: var(--darkblue500);
+    color: white;
+}
+
+.btn-decrypt{
+    background-color: var(--lightblue200);
+    border: 1px solid var(--darkblue500);
+}
+
+main .encrypted{
+    background-color: white;
+    width: 25%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.muneco{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.encrypted .messages{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.no-message{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.aviso{
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 15px;
+}
+.no-text{
+    display: none;
+}
+.encrypted .with-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: none; */
+}
+
+.text-encryted{
+    display: inline-block;
+    width: 85%;
+    height: 90%;
+    margin: 20px;
+    resize: none;
+    border: 0;
+    outline: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.btn-copy{
+    width: 85%;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid var(--darkblue500);
+}
+
+  
+/* Tamaño por defecto pantallas (1280-1024) */
+/* @media (1024px <= width <= 1280px) { } */
+  
+/* Tamaño tablet horizontal (1024-768) */
+/* Tamaño tablet vertical (768-480) */
+@media (480px <= width <= 1024px) { 
+    body{
+        height: 100%;
+    }
+    main{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    main .encryptor, main .encrypted{
+        width: 90%;
+    }
+
+    main .encryptor{
+        height: 30em;
+        flex-shrink: 0;
+    }
+
+    main .encrypted{
+        height: auto;
+        margin: 0 20px 3em 20px;
+        justify-content: center;
+    }
+    .text-encryted{
+        height: auto;
+    }
+
+    .no-text img{
+        display: none;
+    }
+}
+
+/* Tamaño teléfonos (480-menos ) */
+@media (width <= 480px) { 
+    main {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .encryptor, main .encrypted{
+        width: 85%  ;
+    }
+
+    .encryptor{
+        height: 35em;
+    }
+
+    .text-encryptor{
+        height: 85%;
+    }
+    
+    .warning{
+        margin-top: 10px;
+    }
+
+    .encrypted{
+        margin-bottom: 3em;
+    }
+    .no-text img{
+        display: none;
+    }
 }
