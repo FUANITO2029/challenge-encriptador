@@ -79,20 +79,20 @@ main > section {
     height:90%;
 }
 
-main .encryptor{
+.sec__encryptor{
     background-color: var(--lightblue200);
     width: 60%;
     display: flex;
     justify-content: center;
 }
 
-.form-encryptor{
+.sec__encryptor__form{
     width: 100%;
     margin: 10px 15px;
     text-align: center;
 }
 
-.text-encryptor{
+.sec__encryptor__text{
     display: inline-block;
     margin-top:10px;
     width: 95%;
@@ -107,41 +107,39 @@ main .encryptor{
     font-size: 20px;
 }
 
-.warning{
+.sec__encryptor__warning{
     margin: 5px 0 0 65px;
     font-size: 11px;
     text-align: left;
 }
 
-.warning i{
+.sec__encryptor__warning i{
     margin: 0px 5px;
 }
 
-.btns{
+.sec__encryptor__btns{
     display: flex;
     justify-content: center;
     margin-top: 5px;
 }
 
-.btn{
+.sec__encryptor__btn{
     width: 40%;
     margin: 0px 10px 10px 10px;
     padding: 12px;
     border-radius: 15px;
-    border: none;
-}
-
-.btn-encryptor{
-    background-color: var(--darkblue500);
-    color: white;
-}
-
-.btn-decrypt{
-    background-color: var(--lightblue200);
     border: 1px solid var(--darkblue500);
+    background-color: var(--lightblue200);
+    color: var(--darkblue500);
 }
 
-main .encrypted{
+.sec__encryptor__btn:hover{
+    background-color: var(--darkblue400);
+    color: white;
+    border-color: var(--darkblue400);
+}
+
+main .sec__encrypted{
     background-color: white;
     width: 25%;
     display: flex;
@@ -151,33 +149,34 @@ main .encrypted{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.muneco{
+.sec__encrypted__disabled__muneco{
     width: 75%;
     margin: 0 auto;
     padding-top: 100px;
+    display: block
 }
 
-.encrypted .messages{
+.sec__encrypted .sec__encrypted__disabled__messages{
     width: 80%;
     margin: 0 auto;
 }
 
-.no-message{
+.sec__encrypted__disabled--no-message{
     text-align: center;
     font-weight: 700;
     font-size: 20px;
     padding: 5px 15px;
 }
 
-.aviso{
+.sec__encrypted__disabled--warning{
     font-size: 12px;
     text-align: center;
     padding: 5px 15px;
 }
-.no-text{
+.sec__encrypted__disabled{
     display: none;
 }
-.encrypted .with-text{
+.sec__encrypted .sec__encrypted__activated{
     width: 100%;
     height: 100%;
     display: flex;
@@ -186,7 +185,7 @@ main .encrypted{
     /* display: none; */
 }
 
-.text-encryted{
+.sec__encrypted__activated--text{
     display: inline-block;
     width: 85%;
     height: 90%;
@@ -204,7 +203,14 @@ main .encrypted{
     width: 85%;
     margin-bottom: 20px;
     background-color: white;
+    color: var(--darkblue500);
     border: 1px solid var(--darkblue500);
+}
+
+.btn-copy:hover{
+    background-color: var(--darkblue400);
+    color: white;
+    border-color: var(--darkblue400);
 }
 
   
@@ -224,25 +230,25 @@ main .encrypted{
         justify-content: flex-start;
     }
 
-    main .encryptor, main .encrypted{
+    .sec__encryptor, main .sec__encrypted{
         width: 90%;
     }
 
-    main .encryptor{
+    .sec__encryptor{
         height: 30em;
         flex-shrink: 0;
     }
 
-    main .encrypted{
+    main .sec__encrypted{
         height: auto;
         margin: 0 20px 3em 20px;
         justify-content: center;
     }
-    .text-encryted{
+    .sec__encrypted__activated--text{
         height: auto;
     }
 
-    .no-text img{
+    .sec__encrypted__disabled img{
         display: none;
     }
 }
@@ -255,26 +261,26 @@ main .encrypted{
         align-items: center;
     }
 
-    main .encryptor, main .encrypted{
+    .sec__encryptor, main .sec__encrypted{
         width: 85%  ;
     }
 
-    .encryptor{
+    .sec__encryptor{
         height: 35em;
     }
 
-    .text-encryptor{
+    .sec__encryptor__text{
         height: 85%;
     }
     
-    .warning{
+    .sec__encryptor__warning{
         margin-top: 10px;
     }
 
-    .encrypted{
+    .sec__encrypted{
         margin-bottom: 3em;
     }
-    .no-text img{
+    .sec__encrypted__disabled img{
         display: none;
     }
 }
