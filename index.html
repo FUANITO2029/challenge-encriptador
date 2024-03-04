@@ -19,35 +19,33 @@
         </header>
 
         <main>
-            <section class="encryptor">
-                <form class="form-encryptor">
+            <section class="sec__encryptor">
+                <form class="sec__encryptor__form">
                     
-                    <!-- <textarea class="text-encrytor" id="message" cols="100" rows="30" placeholder="Ingrese el texto aquí"></textarea> -->
-                    <textarea class="text-encryptor" id="message" placeholder="Ingrese el texto aquí" ></textarea>
-
+                    <textarea class="sec__encryptor__text" id="message" placeholder="Ingrese el texto aquí" ></textarea>
                     
-                    <p class="warning"><i class="fi fi-sr-exclamation"></i>Solo letras minúsculas y sin acentos</p>
-                    <div class="btns">
-                        <input type="button" value="Encriptar" class="btn btn-encryptor">
-                        <input type="button" value="Desencriptar" class="btn btn-decrypt">
+                    <p class="sec__encryptor__warning"><i class="fi fi-sr-exclamation"></i>Solo letras minúsculas y sin acentos</p>
+                    <div class="sec__encryptor__btns">
+                        <input class="sec__encryptor__btn btn-encryptor" type="submit" value="Encriptar" >
+                        <input class="sec__encryptor__btn btn-decrypt" type="submit" value="Desencriptar" >
                     </div>
 
                 </form>
             </section>
             
-            <section class="encrypted">
-                <div class="no-text">
-                    <img src="images/Muñeco.png" alt="muñeco" class="muneco">
+            <section class="sec__encrypted encrypted">
+                <div class="sec__encrypted__disabled">
+                    <img src="images/Muñeco.png" alt="muñeco" class="sec__encrypted__disabled__muneco">
     
-                    <div class="messages">
-                        <P class="no-message">Ningún mesaje fue encontrado</P>
-                        <p class="aviso">Ingresa el mensaje que deseas encriptar o desencriptar.</p>
+                    <div class="sec__encrypted__disabled__messages">
+                        <P class="sec__encrypted__disabled--no-message">Ningún mesaje fue encontrado</P>
+                        <p class="sec__encrypted__disabled--warning">Ingresa el mensaje que deseas encriptar o desencriptar.</p>
                     </div>
                 </div>
 
-                <div class="with-text">
-                    <p class="text-encryted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea veniam sequi nihil maxime iste voluptatibus est dolor molestiae quis recusandae, quae, aut et saepe neque eum earum? Mollitia ullam temporibus nostrum inventore animi corporis nobis porro, cum illum nisi doloremque, facere ipsa facilis laboriosam ipsam hic rerum fugit soluta voluptatem repellendus perferendis voluptate et veniam. Enim saepe rerum in amet officia, ipsa dolore dolores. Enim laboriosam iusto culpa optio rerum excepturi nemo voluptatum illum! Blanditiis sed impedit error ratione. Possimus sapiente commodi minus, officia ipsa quia accusamus. Assumenda ad ducimus sapiente iure perspiciatis aut optio. Reprehenderit fugit distinctio at.</p>
-                    <button class="btn btn-copy"><i class="fi fi-rr-copy-alt">Copiar</i></button>
+                <div class="sec__encrypted__activated">
+                    <p class="sec__encrypted__activated--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea veniam sequi nihil maxime iste voluptatibus est dolor molestiae quis recusandae, quae, aut et saepe neque eum earum? Mollitia ullam temporibus nostrum inventore animi corporis nobis porro, cum illum nisi doloremque, facere ipsa facilis laboriosam ipsam hic rerum fugit soluta voluptatem repellendus perferendis voluptate et veniam. Enim saepe rerum in amet officia, ipsa dolore dolores. Enim laboriosam iusto culpa optio rerum excepturi nemo voluptatum illum! Blanditiis sed impedit error ratione. Possimus sapiente commodi minus, officia ipsa quia accusamus. Assumenda ad ducimus sapiente iure perspiciatis aut optio. Reprehenderit fugit distinctio at.</p>
+                    <button class="sec__encryptor__btn btn-copy"><i class="fi fi-rr-copy-alt">Copiar</i></button>
 
                 </div>
             </section>
