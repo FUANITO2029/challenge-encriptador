@@ -20,11 +20,27 @@ const rules = {
     u: 'ufat'
 };
 
-// activate section_encrypted
-let activateSectionEncrypted = () => {
+// enable Section__Encrypted
+let enableSectionEncrypted = () => {
     sec_disable.style.display = 'none';
-    sec_enable.style.display = 'block';
+    sec_enable.style.display = 'flex';
 }
+
+// disable Section__Encryted
+let disableSectionEncrypted = () => {
+    sec_disable.style.display = 'block';
+    sec_enable.style.display = 'none';
+}
+
+// validate text of input
+let validateText = (text) => {
+    if (text === ''){
+        disableSectionEncrypted();
+        // alert('No se encontró ningún mensaje!');
+        return false;
+    }
+    return true;
+} 
 
 // function encrytor
 let encrypt = (text) => {
@@ -47,11 +63,15 @@ let decrypt = (text) => {
     return text;
 }
 
+
 // button encrypt 
 btnEncryptor.addEventListener('click', function() {
     const text = textArea.value;
+    if (!validateText(text)){
+        return;
+    }
 
-    activateSectionEncrypted();
+    enableSectionEncrypted();
     let textEncrypted = encrypt(text);
     textEncoded.innerHTML = textEncrypted;
 });
@@ -59,12 +79,14 @@ btnEncryptor.addEventListener('click', function() {
 // button decrypt
 btnDecrypt.addEventListener('click', function(){
     const text = textArea.value;
+    if (!validateText(text)){
+        return;
+    }
 
-    activateSectionEncrypted();
+    enableSectionEncrypted();
     let textDecrypt = decrypt(text);
     textEncoded.innerHTML = textDecrypt;
 });
-
 
 // button copy content 
 btnCopy.addEventListener('click', () => {
