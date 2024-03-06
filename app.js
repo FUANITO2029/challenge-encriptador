@@ -42,6 +42,14 @@ let validateText = (text) => {
     return true;
 } 
 
+// reset styles from btnCopy
+let resetBtnCopy = () => {
+    btnCopy.style.background = '';
+    btnCopy.style.color = '';  
+    btnCopy.style.border = '';  
+    btnCopy.innerHTML = 'Copiar';
+}
+
 // function encrytor
 let encrypt = (text) => {
     let newText = '';
@@ -74,6 +82,7 @@ btnEncryptor.addEventListener('click', function() {
     enableSectionEncrypted();
     let textEncrypted = encrypt(text);
     textEncoded.innerHTML = textEncrypted;
+    resetBtnCopy();
 });
 
 // button decrypt
@@ -86,6 +95,7 @@ btnDecrypt.addEventListener('click', function(){
     enableSectionEncrypted();
     let textDecrypt = decrypt(text);
     textEncoded.innerHTML = textDecrypt;
+    resetBtnCopy();
 });
 
 // button copy content 
@@ -93,5 +103,10 @@ btnCopy.addEventListener('click', () => {
     let content = textEncoded.innerHTML;
     navigator.clipboard.writeText(content);
     console.log('Contenido copiado al portapapeles');
+
+    btnCopy.style.background = 'green';
+    btnCopy.style.color = 'white';
+    btnCopy.style.border = 'none';
+    btnCopy.innerHTML = '\u{2705} Copiado';
 });
   
