@@ -173,16 +173,18 @@ main .sec__encrypted{
     text-align: center;
     padding: 5px 15px;
 }
-.sec__encrypted__disabled{
+
+/* .sec__encrypted__disabled{
     display: none;
-}
+} */
+
 .sec__encrypted .sec__encrypted__activated{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: none; */
+    display: none;
 }
 
 .sec__encrypted__activated--text{
