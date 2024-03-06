@@ -174,9 +174,6 @@ main .sec__encrypted{
     padding: 5px 15px;
 }
 
-/* .sec__encrypted__disabled{
-    display: none;
-} */
 
 .sec__encrypted .sec__encrypted__activated{
     width: 100%;
@@ -190,7 +187,7 @@ main .sec__encrypted{
 .sec__encrypted__activated--text{
     display: inline-block;
     width: 85%;
-    height: 90%;
+    height: 80%;
     margin: 20px;
     resize: none;
     border: 0;
